@@ -1,7 +1,7 @@
 var express = require('express');
 var bodyParser = require('body-parser');
 var app = express();
-var exec = require('child_process').exec;
+var exec = require('child_process').sudo.exec;
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
@@ -25,7 +25,7 @@ app.post('/synchronize', function (req, res) {
 	//exec('git -C ~/projects/wackcoon-device clean -df', execCallback);
 
 	// now pull down the latest
-	exec('git -C ~/projects/wackcoon-device pull -f', execCallback);
+	exec('git -C ~/../../var/www/syncrhonizer/ pull -f', execCallback);
 
 	// and npm install with --production
 	//exec('npm -C ~/projects/wackcoon-device install --production', execCallback);
