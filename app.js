@@ -14,7 +14,7 @@ app.get('/', function (req, res) {
 app.post('/synchronize', function (req, res) {
 	//verify that the payload is a push from the correct repo
 	//verify repository.name == 'wackcoon-device' or repository.full_name = 'DanielEgan/wackcoon-device'
-	console.log(req.body.pusher.name + ' just pushed to ' + req.body.repository.name);
+	//console.log(req.body.pusher.name + ' just pushed to ' + req.body.repository.name);
 
 	console.log('pulling code from GitHub...');
 
