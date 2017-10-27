@@ -25,7 +25,8 @@ app.post('/synchronize', function (req, res) {
 	//exec('git -C ~/projects/wackcoon-device clean -df', execCallback);
 
 	// now pull down the latest
-	exec('git -C ~/../../var/www/syncrhonizer/ pull -f', execCallback);
+	exec('git -C ~/../../var/www/talesByPortraits/ pull -f', execCallback);
+  exec('git -C ~/../../var/www/talesByPortraitsServer/ pull -f', execCallback);
 
 	// and npm install with --production
 	//exec('npm -C ~/projects/wackcoon-device install --production', execCallback);
